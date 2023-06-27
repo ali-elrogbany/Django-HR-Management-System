@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(181, 226, 234);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10%;
+}
+
+h2 {
+    color: #666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #292828;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+table:nth-of-type(2n) {
+    background-color: #f2f2f2;
+}
+
+
+.clickable:hover {
+    background-color: #f2f2f2;
+}
+
+img{
+    width: 30%;
+    height:30%;
+}
+
+.entity_box, .database-select{
+    color: #333;
+    border-radius: 10px;
+    border: 2px solid rebeccapurple;
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 2%;
+    background-color: #dfdfdf;
+    width: 100%;
+}
+
+.entity_box a, .database-select a{
+    color: #333;
+    text-decoration: none;
+}
+
+.entity_box a:hover, .database-select a:hover{
+    color: #717171;
+}
+
+table a{
+    color: rgb(42, 97, 170);
+}

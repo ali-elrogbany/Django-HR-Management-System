@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <h1>Add New Branch</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/">HOME</a>
+</body>
+</html>

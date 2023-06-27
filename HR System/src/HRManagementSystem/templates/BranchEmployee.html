@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>All Employees in {{branch}}</h1>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Branch</td>
+                <td>Update</td>
+                <td>Delete</td>
+            </tr>
+            {% for row in data %}
+            <tr>
+                <td>{{row.id}}</td>
+                <td>{{row.name}}</td>
+                <td>{{row.age}}</td>
+                <td>{{row.email}}</td>
+                <td>{{row.phone}}</td>
+                <td>{{row.currentBranch}}</td>
+                <td><a href="/employees/update/{{row.id}}/">Update</a></td>
+                <td><a href="/employees/delete/{{row.id}}/">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="row">
+            <div class="col-12">
+                <div class="database-select">
+                    <a href="create/">Add New Employee</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="/">HOME</a>
+</body>
